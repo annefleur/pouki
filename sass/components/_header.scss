@@ -1,0 +1,65 @@
+// Header
+//
+// Primary site header related components.
+//
+// Markup:
+// <div class="header">
+// <img src="../../images/aff.svg" alt="AFF__logo" class="logo">
+// <div class="bar"></div>
+// <div class="info">
+// <p class="name">Anne-Fleur Fosséprez</p>
+// <p class="fct">GRAPHIC DESIGNER</p>
+// </div>
+// </div>
+//
+// Styleguide header
+
+
+
+// Component
+// --------------------------------------------------
+header {
+
+  .logo {
+    position:absolute;
+    top:0;
+    height: 100px;
+    opacity: 0.9;
+  }
+
+  .bar {
+    position:relative;
+    display: inline-block;
+    height: 116px;
+    width: 5px;
+    left:135px;
+    margin-top: 10px;
+    background-color: black;
+    opacity: 0.8;
+  }
+
+
+
+  .info {
+    position: relative;
+    display: inline-block;
+    top: -5px;
+    left:130px;
+    font-family: 'Abel', Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+
+    .name {
+      letter-spacing: 1px !important;
+      opacity: 0.7;
+    }
+    .fct {
+      //font-family: 'Ropa Sans', Helvetica, Arial, sans-serif;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+  p{
+    margin:2px 10px;
+  }
+}

@@ -1,0 +1,318 @@
+// Picture
+//
+// Markup:
+//
+// Styleguide pic
+
+
+// Component
+// --------------------------------------------------
+//.picture{
+//  .list--picture{
+//    .illu-project{
+//      float:left;
+//      width:50%;
+//    }
+//    a{
+//      img{
+//        width:95%;
+//        //height:300px;
+//        margin:5px;
+//        @include breakpoint(phone){
+//          width:45%;
+//        }
+//        @include breakpoint(desktop){
+//          width:20%;
+//        }
+//
+//      }
+//      .image--title{
+//        opacity:0.0;
+//        position: relative;
+//        left:10px;
+//
+//      }
+//      &:hover{
+//        img{
+//        opacity:0.6;
+//        }
+//        .image--title{
+//          opacity:1.0;
+//        }
+//      }
+//    }
+//  }
+//}
+
+
+.list--group {
+.panel--list__wrapper{
+  border:none;
+  display:inline-block;
+  .panel--list {
+    width: 200px;
+    padding:0;
+    margin: -1px 5px;
+
+
+    img{
+      width:100%;
+    }
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+  }
+  .panel-body--list{
+    background-color: rgba(#000,.1);
+    margin-left:5px;
+    margin-top: -201px;
+    padding:0;
+    //padding-top: 200px;
+
+    .description{
+      //width:30%;
+      margin-top:200px;
+      margin-left:auto;
+      padding:10px 20px;
+      height:90%;
+      background-color: rgba(#FFF,.3);
+      @include breakpoint(tablet){
+        height:200px;
+      }
+      h4{
+        margin:12px 0;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    .images{
+      padding:20px;
+      img{
+        margin:10px;
+      }
+
+      .footnote{
+        margin-left:20px;
+      }
+    }
+
+    @include breakpoint(tablet){
+      .description{
+        margin-top:0;
+        margin-left:200px;
+        padding:20px;
+        height:200px;
+      }
+    }
+
+    .list__pic{
+      width:97%;
+      float:left;
+      @include breakpoint(tablet){
+        width:47%;
+      }
+    }
+
+    .scroll{
+      position:relative;
+      width:20px;
+      top:20px;
+    }
+    .big-device {
+
+
+      .list__web {
+        display: none;
+        @include breakpoint(desktop) {
+          display: block;
+          width: 70%;
+          position: relative;
+          top: 0;
+        }
+        @include breakpoint(lg-desktop) {
+          width: 1000px;
+          margin: 10px;
+        }
+      }
+      .list__web--scroll {
+        position: relative;
+        top: 0;
+        //margin-top:-57%;
+        height: 50%;
+        overflow-y: scroll;
+        margin-bottom: 10%;
+
+        .list__web {
+          display: block;
+          position: relative;
+          width: 95%;
+        }
+        @include breakpoint(desktop) {
+          top: 0;
+          height: 290px;
+          margin-top: -345px;
+          margin-bottom: 10%;
+          .list__web {
+            width: 465px;
+            margin: 0 90px;
+          }
+        }
+        @include breakpoint(lg-desktop) {
+          height: 460px;
+          margin-top: -545px;
+          .list__web {
+            width: 735px;
+            margin: 0 142px;
+
+          }
+        }
+      }
+
+      &.ipad {
+        .list__web {
+          display: none;
+          @include breakpoint(desktop) {
+            display: block;
+            width: 50%;
+            position: relative;
+            top: 0;
+          }
+          @include breakpoint(lg-desktop) {
+            width: 600px;
+            margin: 10px;
+          }
+        }
+        .list__web--scroll {
+          .list__web {
+            display: block;
+            width: 50%;
+          }
+          @include breakpoint(desktop) {
+            top: 0;
+            height: 480px;
+            margin-top: -540px;
+            //margin-bottom:10%;
+            .list__web {
+              width: 380px;
+              margin: 0 50px;
+              right: 10px;
+            }
+          }
+          @include breakpoint(lg-desktop) {
+            height: 645px;
+            margin-top: -720px;
+            margin-bottom: 10%;
+            .list__web {
+              width: 495px;
+              margin: 0 68px;
+
+            }
+          }
+        }
+      }
+
+      &.iphone {
+        float: right;
+        position: relative;
+        right: 0;
+        margin-top: -550px;
+        @include breakpoint(desktop) {
+          right: -300px;
+        }
+        @include breakpoint(lg-desktop) {
+          margin-top: -700px;
+          right: 0;
+        }
+        .list__web {
+          display: none;
+          @include breakpoint(desktop) {
+            display: block;
+            width: 40%;
+
+          }
+          @include breakpoint(lg-desktop) {
+            width: 300px;
+            margin: 10px;
+          }
+        }
+        .list__web--scroll {
+
+          .list__web {
+            display: block;
+            width: 50%;
+          }
+          @include breakpoint(desktop) {
+            //top:-520px;
+            height: 345px;
+            margin-top: -420px;
+            margin-bottom: 10%;
+            .list__web {
+              width: 195px;
+              margin: 0 25px;
+            }
+          }
+          @include breakpoint(lg-desktop) {
+            //top:-525px;
+            height: 455px;
+            margin-top: -550px;
+            margin-bottom: 10%;
+            .list__web {
+              width: 255px;
+              margin: 0 35px;
+
+            }
+          }
+        }
+      }
+    }
+    .big-device{
+      display:none;
+      @include breakpoint(desktop){
+        display:block;
+      }
+    }
+    .small-device{
+      display:block;
+      float:left;
+      @include breakpoint(desktop){
+        display:none;
+      }
+
+      .list__web--small{
+        width:100%;
+      }
+
+      &.ipad{
+        width:60%;
+        .list__web--small{
+
+        }
+      }
+
+      &.iphone{
+        width:30%;
+        margin-left:20px;
+        .list__web--small{
+
+        }
+      }
+
+
+    }
+  }
+}
+}
+
+#aboutme{
+  img{
+    width:150px;
+    float:left;
+    margin-right:10px;
+  }
+  p{
+    margin:10px;
+  }
+}
